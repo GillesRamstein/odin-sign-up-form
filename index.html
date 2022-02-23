@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div class="hero-img">
+            <div class="banner">
+                <div class="logo">MyLogo</div>
+                <div class="title">MyTitle</div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="content-top">
+                <div class="description">
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                    do eiusmod tempor incididunt ut labore et dolore magna
+                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                    Duis aute irure dolor in reprehenderit in voluptate velit
+                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+                    occaecat cupidatat non proident, sunt in culpa qui officia
+                    deserunt mollit anim id est laborum.
+                </div>
+                <div class="catch-phrase">Lorem ipsum dolor sit amet</div>
+            </div>
+            <div class="content-center">
+                <form action="/handle-form" method="post" id="signup-form">
+                    <fieldset>
+                        <legend>Form Legend</legend>
+                        <div class="form-column">
+                            <input
+                                type="text"
+                                name="name-first"
+                                id="name-first"
+                                tabindex="0"
+                            />
+                            <label for="name-first">First Name</label>
+                            <input
+                                type="email"
+                                name="email"
+                                id="email"
+                                tabindex="0"
+                            />
+                            <label for="email">E-Mail Address</label>
+                            <input
+                                type="password"
+                                name="password"
+                                id="password"
+                                tabindex="0"
+                            />
+                            <label for="password">Password</label>
+                        </div>
+                        <div>
+                            <input
+                                type="text"
+                                name="name-last"
+                                id="name-last"
+                                tabindex="0"
+                            />
+                            <label for="name-last">Last Name</label>
+                            <input
+                                type="tel"
+                                name="phone"
+                                id="phone"
+                                tabindex="0"
+                            />
+                            <label for="phone">Phone Number</label>
+                            <input
+                                type="password"
+                                name="pwd-confirmation"
+                                id="pwd-confirm"
+                                tabindex="0"
+                            />
+                            <label for="pwd-confirmation"
+                                >Confirm Password</label
+                            >
+                        </div>
+                        <input
+                            type="submit"
+                            id="submit-form"
+                            class="hidden"
+                            tabindex="-1"
+                        />
+                    </fieldset>
+                </form>
+            </div>
+            <div class="content-bottom">
+                <div class="create-acc-button">
+                    <label for="submit-form" tabindex="0">Create Account</label>
+                </div>
+                <div>
+                    <span>Already have an account?</span>
+                    <a href="/handle-login" tabindex="0">Log in</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
