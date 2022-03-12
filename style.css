@@ -1,2 +1,188 @@
-@import "normalize.css"
+@import "normalize.css";
 
+@font-face {
+    font-family: "IndieFlower";
+    src: url("fonts/IndieFlower-Regular.ttf");
+}
+
+@font-face {
+    font-family: "ShadowsIntoLight";
+    src: url("fonts/ShadowsIntoLight-Regular.ttf");
+}
+
+@font-face {
+    font-family: "NunitoLight";
+    src: url("fonts/Nunito-Light.ttf");
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    font-family: "IndieFlower", "ShadowsIntoLight", monospace, sans-serif;
+    color: rgb(20, 20, 20);
+}
+
+.hero-img {
+    background-image: url("images/jungle.jpg");
+    background-position: 38% 50%;
+    background-size: cover;
+    min-height: 25vh;
+
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(20, 20, 20, 0.575);
+    padding: 1rem 4rem;
+    margin-top: auto;
+}
+
+.banner img {
+    width: 125px;
+}
+
+.banner-title {
+    margin-left: 0.5rem;
+    margin-right: 1rem;
+    color: #FFFAF0;
+    font-size: 4.5rem;
+}
+
+.hero-img-ref {
+    display: flex;
+    gap: 1.5rem;
+    margin-top: auto;
+    margin-bottom: 0.2rem;
+    align-self: center;
+    color:#fffaf04d;
+    font-size: small;
+}
+
+.hero-img-ref a {
+    text-decoration: none;
+    color: #fffaf04d;
+}
+
+.hero-img-ref a:visited {
+    color: #fffaf04d;
+}
+
+.content {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 60vw;
+    background-color:#FFFAF0;
+}
+
+.content-top {
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 2rem 0.5rem 3rem;
+    font-size: larger;
+    letter-spacing: 0.05rem;
+}
+
+/* .content-top-descripton {} */
+
+.content-top-catch-phrase {
+    margin-top: 1rem;    
+}
+
+.content-center {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+    padding: 3rem 3rem;
+
+    background-color: #fffefa;
+    box-shadow: 5px 5px 5px rgb(204, 204, 204);
+
+    font-family: "ShadowsIntoLight", monospace, sans-serif;
+    letter-spacing: .1rem;
+}
+
+.form-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    margin: 0rem 2.5rem 0.8rem 0;
+}
+
+.input label {
+    font-size: .9rem;
+    margin-left: 0.5rem;
+    margin-bottom: 0.1rem;
+    order: 0;
+}
+
+.input input {
+    letter-spacing: 0.1rem;
+    order: 1;
+}
+
+.input input:focus {
+    outline: none;
+    box-shadow: 1px 1px 1px;
+    background-color: #FFFAF0;
+}
+
+.input input:not(:placeholder-shown):valid + label::after {
+    content: " \1F5F8";
+    color: green;
+}
+
+.input input:not(:placeholder-shown):invalid + label::after {
+    content: " \2613";
+    color: red;
+}
+
+.password-valid {
+    display: flex;
+    flex-direction: column;
+    font-size: 0.75rem;
+    margin: -0.5rem 0 0.5rem 1rem;
+}
+
+.password-message {
+    font-family: "NunitoLight", monospace, sans-serif;
+    font-size: .8rem;
+    letter-spacing: normal;
+    max-width: 470px;
+}
+
+.hidden {
+    visibility: hidden;
+    display: none;
+}
+
+.password-message ul {
+    padding-left: .7rem;
+}
+
+.content-bottom {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 3rem;
+}
+
+.content-bottom input {
+    width: fit-content;
+    background-color: rgb(72, 133, 72);
+    border: 1px solid black;
+    border-radius: 5px;
+    padding: 9px 25px 10px 25px;
+    margin-bottom: 1rem;
+    margin-left: 0.5rem;
+}

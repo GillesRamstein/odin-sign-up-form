@@ -5,99 +5,172 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="style.css" />
+        <script defer src="script.js"></script>
         <title>Document</title>
     </head>
     <body>
         <div class="hero-img">
             <div class="banner">
-                <div class="logo">MyLogo</div>
-                <div class="title">MyTitle</div>
+                <img src="images/logo.svg" alt="stylized-flower-logo" />
+                <div class="banner-title">Leaf</div>
+            </div>
+            <div class="hero-img-ref">
+                <div>
+                    Logo by
+                    <a href="https://freesvg.org/stylized-flower-silhouette"
+                        >FreeSVG on Pixabay</a
+                    >
+                </div>
+                <div>
+                    Photo by
+                    <a
+                        href="https://unsplash.com/@tomaswilliamsa?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                        >Tomas Williams</a
+                    >
+                    on
+                    <a
+                        href="https://unsplash.com/?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText"
+                        >Unsplash</a
+                    >
+                </div>
             </div>
         </div>
         <div class="content">
-            <div class="content-top">
-                <div class="description">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
-                    do eiusmod tempor incididunt ut labore et dolore magna
-                    aliqua. Ut enim ad minim veniam, quis nostrud exercitation
-                    ullamco laboris nisi ut aliquip ex ea commodo consequat.
-                    Duis aute irure dolor in reprehenderit in voluptate velit
-                    esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                    occaecat cupidatat non proident, sunt in culpa qui officia
-                    deserunt mollit anim id est laborum.
+            <form action="/handle-form" method="post" id="signup-form">
+                <div class="content-top">
+                    <div class="content-top-description">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                        sed do eiusmod tempor incididunt ut labore et dolore
+                        magna aliqua. Ut enim ad minim veniam, quis nostrud
+                        exercitation ullamco laboris nisi ut aliquip ex ea
+                        commodo consequat. Duis aute irure dolor in
+                        reprehenderit in voluptate velit esse cillum dolore eu
+                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                        non proident, sunt in culpa qui officia deserunt mollit
+                        anim id est laborum.
+                    </div>
+                    <div class="content-top-catch-phrase">
+                        Lorem ipsum dolor sit amet
+                    </div>
                 </div>
-                <div class="catch-phrase">Lorem ipsum dolor sit amet</div>
-            </div>
-            <div class="content-center">
-                <form action="/handle-form" method="post" id="signup-form">
-                    <fieldset>
-                        <legend>Form Legend</legend>
-                        <div class="form-column">
+
+                <div class="content-center">
+                    <div class="form-row">
+                        <div class="input">
                             <input
+                                required
                                 type="text"
                                 name="name-first"
                                 id="name-first"
+                                placeholder="John"
+                                size="22"
                                 tabindex="0"
+                                pattern="[A-Z][a-z]*|[a-z]+"
                             />
-                            <label for="name-first">First Name</label>
-                            <input
-                                type="email"
-                                name="email"
-                                id="email"
-                                tabindex="0"
-                            />
-                            <label for="email">E-Mail Address</label>
-                            <input
-                                type="password"
-                                name="password"
-                                id="password"
-                                tabindex="0"
-                            />
-                            <label for="password">Password</label>
+                            <label for="name-first">> First Name</label>
                         </div>
-                        <div>
+                        <div class="input">
                             <input
+                                required
                                 type="text"
                                 name="name-last"
                                 id="name-last"
+                                placeholder="Smith"
+                                size="22"
                                 tabindex="0"
+                                pattern="[A-Z][a-z]*|[a-z]+"
                             />
-                            <label for="name-last">Last Name</label>
+                            <label for="name-last">> Last Name</label>
+                        </div>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input">
                             <input
+                                required
+                                type="email"
+                                name="email"
+                                id="email"
+                                placeholder="johnsmith@email.com"
+                                size="22"
+                                tabindex="0"
+                                pattern=".+\..+"
+                            />
+                            <label for="email">> E-Mail Address</label>
+                        </div>
+                        <div class="input">
+                            <input
+                                required
                                 type="tel"
                                 name="phone"
                                 id="phone"
+                                placeholder="+41 12 345 6789"
+                                size="22"
                                 tabindex="0"
+                                pattern="\+\d{2}[\d\s]{7,}"
                             />
-                            <label for="phone">Phone Number</label>
-                            <input
-                                type="password"
-                                name="pwd-confirmation"
-                                id="pwd-confirm"
-                                tabindex="0"
-                            />
-                            <label for="pwd-confirmation"
-                                >Confirm Password</label
-                            >
+                            <label for="phone">> Phone Number</label>
                         </div>
-                        <input
-                            type="submit"
-                            id="submit-form"
-                            class="hidden"
-                            tabindex="-1"
-                        />
-                    </fieldset>
-                </form>
-            </div>
-            <div class="content-bottom">
-                <div class="create-acc-button">
-                    <label for="submit-form" tabindex="0">Create Account</label>
+                    </div>
+
+                    <div class="form-row">
+                        <div class="input">
+                            <input
+                                required
+                                type="password"
+                                name="password"
+                                id="password"
+                                placeholder="not 1234"
+                                size="22"
+                                tabindex="0"
+                                minlength="8"
+                                pattern="(?=.*[0-9])(?=.*[a-z])(?=.*[A-Z])(?=.*[@#$%^&+=()-])(?!.*[ ]).{8,20}"
+                                pattern=".*"
+                            />
+                            <label for="password">> Password</label>
+                        </div>
+                        <div class="input">
+                            <input
+                                required
+                                type="password"
+                                name="pwd-confirm"
+                                id="pwd-confirm"
+                                placeholder="neither johnsmith"
+                                size="22"
+                                tabindex="0"
+                                pattern=".*"
+                            />
+                            <label for="pwd-confirm">> Confirm Password</label>
+                        </div>
+                    </div>
+
+                    <div class="password-message hidden">
+                        The password must contain
+                        <ul>
+                            <li>between 8 and 20 characters</li>
+                            <li>at least 1 lowercase character</li>
+                            <li>at least 1 uppercase character</li>
+                            <li>at least 1 number</li>
+                            <li>
+                                <div>at least 1 special character</div>
+                                <div>( @#$%^&+=()- )</div>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
-                <div>
-                    <span>Already have an account?</span>
-                    <a href="/handle-login" tabindex="0">Log in</a>
+
+                <div class="content-bottom">
+                    <input
+                        type="submit"
+                        id="submit-form"
+                        tabindex="-1"
+                    />
+                    <div>
+                        <span>Already have an account?</span>
+                        <a href="/handle-login" tabindex="0">Log in</a>
+                    </div>
                 </div>
-            </div>
+            </form>
         </div>
     </body>
 </html>
